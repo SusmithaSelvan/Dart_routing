@@ -2,6 +2,7 @@ import 'dart:html';
 import 'home.dart' deferred as home;
 import 'about.dart' deferred as about;
 import 'contact.dart' deferred as contact;
+import 'sample.dart' deferred as sample;
 
 void main() {
   // querySelector('#output')?.text = 'Your Dart app is running.';
@@ -31,6 +32,9 @@ void renderScreen(String? route) async {
   } else if (nonNullableRoute == '/contact.html') {
     await contact.loadLibrary();
     contact.render(appElement!);
+  }else if (nonNullableRoute == '/sample.html') {
+    await sample.loadLibrary();
+    sample.render(appElement!);
   }
 }
 
